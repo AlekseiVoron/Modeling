@@ -1,11 +1,11 @@
 # Вариант 3
 import math
+
 import matplotlib.pyplot as plt
-import numpy as np
 
 VESSEL_HEIGHT = 6           # высота сосуда
 VESSEL_DIAMETER = 4         # диаметр сосуда
-HOLE_RADIUS = 0.1           # радиус круглого отверстия на дне
+HOLE_RADIUS = 1           # радиус круглого отверстия на дне
 k = 0.6                     # коэффициент скорости истечения жидкости из отверстия
 g = 9.8                     # ускорение свободного падения
 
