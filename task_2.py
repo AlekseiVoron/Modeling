@@ -30,15 +30,10 @@ def euler(x, y, a, b):
 
 
 if __name__ == '__main__':
-    # a = float(input('a = '))
-    # b = float(input('b = '))
-    # x_0 = float(input('x_0 = '))
-    # y_0 = float(input('y_0 = '))
-
-    a = 2
-    b = 1
-    x_0 = -3
-    y_0 = 0.01
+    a = float(input('a = '))
+    b = float(input('b = '))
+    x_0 = float(input('x_0 = '))
+    y_0 = float(input('y_0 = '))
 
     x_array = []
     y_array = []
