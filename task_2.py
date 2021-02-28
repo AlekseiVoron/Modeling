@@ -21,12 +21,12 @@ def euler(x, y, a, b):
     x_array.append(x)
     y_array.append(y)
     while t < T:
-        x = x + h * f1(x, a)
-        y = y + h * f2(y, b)
+        x += h * f1(x, a)
+        y += h * f2(y, b)
         x_array.append(x)
         y_array.append(y)
-        t = t + h
-        i = i + 1
+        t += h
+        i += 1
 
 
 if __name__ == '__main__':

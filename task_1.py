@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 VESSEL_HEIGHT = 6           # высота сосуда
 VESSEL_DIAMETER = 4         # диаметр сосуда
-HOLE_RADIUS = 1           # радиус круглого отверстия на дне
+HOLE_RADIUS = 0.1           # радиус круглого отверстия на дне
 k = 0.6                     # коэффициент скорости истечения жидкости из отверстия
 g = 9.8                     # ускорение свободного падения
 
@@ -32,9 +32,9 @@ def euler(x, t):
     x_array.append(x)
     t_array.append(t)
     while x > RES:
-        x = x + h * f(x)
+        x += h * f(x)
         x_array.append(x)
-        t = t + h
+        t += h
         t_array.append(t)
     return t
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     print(f'Ускорение свободного падения: {g} м/с^2\n')
     print(f'Высота сосуда: {VESSEL_HEIGHT} м')
     print(f'Диаметр сосуда: {VESSEL_DIAMETER} м')
-    print('В начальный момент времени сосуд дохерху наполнен водой\n')
+    print('В начальный момент времени сосуд доверху наполнен водой\n')
     print(f'Площадь отверстия на дне сосуда: {s} м^2')
     print(f'Площадь горизонтального сечения сосуда: {S} м^2\n')
 
