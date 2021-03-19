@@ -2,7 +2,7 @@ from enum import Enum
 import random
 
 
-GAMES = 10000          # число испытаний
+GAMES = 10          # число испытаний
 ROUNDS = 1000       # число исходов
 
 
@@ -33,14 +33,14 @@ def game():
     return winning_period_p1
 
 
-def estimate_expected_value(sum_x, n):
-    return sum_x / n
+def estimate_expected_value(sum_x):
+    return sum_x
 
 
 if __name__ == '__main__':
     results = {}
     for game_number in range(1, GAMES + 1):
-        results[game_number] = estimate_expected_value(game(), ROUNDS)
+        results[game_number] = estimate_expected_value(game())
 
     print(f'Оценки математических ожиданий по результатам {GAMES} игр по {ROUNDS} раундов:')
     for i in results:
